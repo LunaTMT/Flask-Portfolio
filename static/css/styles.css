@@ -1,0 +1,147 @@
+
+
+/*TOP */
+header {
+    margin: 0 5%;
+}
+/* -------- */
+
+
+/* 
+BODY 
+EVERYTHING BELOW IS WITHIN THE BODY
+*/
+body {
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
+/*HEADER */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-style: groove;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+/* Updated styles for .left-section */
+.left-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 20px; /* Add padding to the left and right sides */
+}
+
+.left-section ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    width: 80%; /* Set width to fill available space */
+    justify-content: space-evenly; /* Adjust spacing between menu items */
+}
+
+.menu li {
+    flex-grow: 1; /* Allow each li to take equal space */
+    text-align: center; /* Center the content */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #57575c;
+}
+
+
+/* Updated styles for .right-section */
+.right-section {
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Add padding to the left and right sides */
+    overflow-x: auto; /* Enable horizontal scrolling for overflow */
+}
+
+.right-section img {
+    width: 50px; /* Adjust the width of the images */
+    height: auto;
+    margin-left: 10px; /* Adjust margin between images */
+    max-width: 100%; /* Ensure images do not exceed their container */
+}
+
+
+
+/* -------- */
+
+
+
+
+.content h1 {
+    margin: 0 5%;
+    margin-top: 2.5%;
+
+
+    border-top: 0;
+    border-bottom: 0;
+    text-align: left;
+
+}
+
+
+
+.content section h1, h2, .project_poster_and_date {
+    text-align: center;
+}
+
+
+.content section:first-of-type {
+    margin-top: 2.5%;
+}
+
+.content section {
+    /*background-color: black;*/
+    border-style: groove;
+    margin: 5% 20%;
+    padding: 0 40px;
+}
+
+.content section .video-container {
+    max-width: 100%; /* Adjust as needed */
+    height: auto;
+    margin: 2.5% auto; /* Add margin for spacing */
+}
+
+.content section .video-container video {
+    width: 100%; /* 100% of the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+/*FOOTER */
+footer {
+    margin: 0 5%;
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 0;
+    padding-top: 10px; 
+}
+
+footer ul {
+    padding: 0 20px;
+}
+
+footer li {
+    list-style-position: inside; 
+    display: inline;
+  }
+/* -------- */
