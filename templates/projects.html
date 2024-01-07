@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Home - My Website{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+ 
+{% endblock %}
+
 
 {% block content %}
-    <!-- Specific content for the home page -->
-    <section>
-        <h2>Welcome to our Projects Page!</h2>
-        <p>Contact me here:</p>
-    </section>
+
+    <h1>Recent Projects</h1>
+    <ul class="right-list">
+        <li><a href="{{ url_for('main.bubbleshooter') }}">Bubbleshooter</a></li>
+        <li><a href="{{ url_for('main.minesweeper') }}">Minesweeper</a></li>
+    </ul>
 {% endblock %}

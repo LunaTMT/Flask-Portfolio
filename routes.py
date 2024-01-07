@@ -7,6 +7,20 @@ bp = Blueprint('main', __name__)
 @bp.route('/')
 @bp.route('/index')
 def index():
+    video_names = ["bubbleshooter", "minesweeper"]
+    
+    return render_template('index.html', title="Home", video_names=video_names)
+
+@bp.route('/about')
+def about():
+    return render_template('about.html', title="About")
+
+@bp.route('/contact')
+def contact():
+    return render_template('contact.html', title="Contact")
+
+@bp.route('/projects')
+def projects():
 
     posts = [
         {
@@ -24,19 +38,7 @@ def index():
     }]  
 
 
-    return render_template('index.html', title="Home", posts=posts)
-
-@bp.route('/about')
-def about():
-    return render_template('about.html', title="About")
-
-@bp.route('/contact')
-def contact():
-    return render_template('contact.html', title="Contact")
-
-@bp.route('/projects')
-def projects():
-    return render_template('projects.html', title="Projects")
+    return render_template('projects.html', title="Projects", posts=posts)
 
 
 @bp.route('/blog')
