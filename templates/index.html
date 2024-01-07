@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Recent Projects</h1>
+    {% for post in posts %}
+    <section>
+        <h2>{{ post.name.title() }}</h2>
+        <p class="project_poster_and_date" >Posted by {Marshall} on {date}, {tag} </p>
+        <h3>Description</h3>
+        <p> {{ post.description }} </p>
+        <h3>Personal Overview</h3>
+        <p> {{ post.personal_overview }} </p>
+        <a href="{{ post.name }}" class="link">
+            <p>Continue reading this post</p>
+        </a>
+
+        <div class="video-container">
+            <video controls>
+                <source src="/static/videos/{{ post.video.name }}" type="video/mp4">    
+            </video>  
+        </div>
+    </section>  
+    {% endfor %}
+
+{% endblock %}

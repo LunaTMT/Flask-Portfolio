@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Developer Log - {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lato.css') }}">
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+       
+        <nav>
+            <div class="left-section">
+                <h1>Developer Log</h1>
+                <ul class="menu">
+                    <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                    <li><a href="{{ url_for('main.about') }}">About</a></li>
+                    <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('main.projects') }}">Projects</a></li>
+                    <li><a href="{{ url_for('main.blog') }}">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="right-section">
+                <a href="{{ url_for('main.about') }}" target="_self">
+                    <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="About">
+                </a>
+                <a href="https://www.youtube.com/channel/UCYvuD6FQETZ9am_kEeH0xGg" target="_blank">
+                    <img src="{{ url_for('static', filename='images/youtube.jpeg') }}" alt="Youtube">
+                </a>
+                <a href="https://github.com/LunaTMT" target="_blank">
+                    <img src="{{ url_for('static', filename='images/github.jpeg') }}" alt="Github">
+                </a>
+                <a href="https://www.linkedin.com/in/t-shredder-a8857b9a/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/linkedin.jpeg') }}" alt="Linkedin">
+                </a>
+            </div>
+        </nav>
+        
+    </header>
+
+
+    <!-- Content block -->
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>find me</p>
+        <ul>
+            <li><a href="https://github.com/LunaTMT">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/t-shredder-a8857b9a/">Linkedin</a></li>
+        </ul>
+
+    </footer>
+</body>
+</html>
