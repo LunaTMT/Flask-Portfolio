@@ -1,0 +1,16 @@
+/* Styles for the gradient container */
+body {
+    background-color: white; /* Changing body background color */
+    width: 80%;
+    font-family: 'Lato', sans-serif;
+    display: flex; /* Using flexbox to align content */
+    flex-direction: column;
+    justify-content: center; /* Horizontally centering content */
+    align-items: center; /* Vertically centering content */
+    margin: 0% auto;
+}
+
+.content {
+    width: 80%;
+}
+
