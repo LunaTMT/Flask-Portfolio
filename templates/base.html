@@ -3,7 +3,7 @@
 <body>
     <head>
         <title>Developer Log - {{ title }}</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/lato.css') }}">
@@ -53,13 +53,13 @@
     </div>
 
     
-    <footer>
-        <p>find me</p>
-        <ul>
-            <li><a href="https://github.com/LunaTMT">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/t-shredder-a8857b9a/">Linkedin</a></li>
-        </ul>
-    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.content h1').classList.add('slide-in');
+            document.querySelector('.content .containers').classList.add('slide-in');
+            document.querySelector('.content .right-list').classList.add('slide-in');
+        });
+    </script>
         
 </body>
 </html>
