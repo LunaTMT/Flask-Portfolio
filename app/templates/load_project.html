@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/load_project.css') }}">
+    <script src="{{ url_for('static', filename='js/toggle_visibility.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <section>
+        <div class="containers">
+            <div id="description-container" class="description-container hide">
+                <h2>Description</h2>
+                <p>{{ content.description }} </p>
+            </div>
+        
+            <div id="overview-container" class="overview-container hide">
+                <h2>Overview</h2>
+                <p>{{ content.description }} </p>
+            </div>
+        
+            <div id="video-container" class="video-container hide">
+                <h2>Video</h2>
+                <p>{{ content.description }} </p>
+            </div>
+        
+            {% if content.devlog %}
+                <div id="devlog-container" class="devlog-container hide">
+                    <h2>Devlog</h2>
+                    <p>{{ content.description }} </p>
+                </div>
+            {% endif %}
+            
+            {% if content.tutorial %}
+                <div id="tutorial-container" class="tutorial-container hide">
+                    <h2>Tutorial</h2>
+                    <p>{{ content.description }} </p>
+                </div>
+            {% endif %}
+        
+
+        </div>
+    
+        <ul class="right-list">
+            <li onclick="toggleContainerVisibility('description-container')">Description</li>
+            <li onclick="toggleContainerVisibility('overview-container')">Overview</li>
+            <li onclick="toggleContainerVisibility('video-container')">Video</li>
+            
+            {% if content.devlog %}
+                <li onclick="toggleContainerVisibility('devlog-container')">Dev Log</li>
+            {% endif %}
+         
+            {% if content.tutorial %}
+                <li onclick="toggleContainerVisibility('tutorial-container')">Tutorial</li>
+            {% endif %}
+            
+        </ul>
+    </section>
+{% endblock %}
+
+

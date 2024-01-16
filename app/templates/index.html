@@ -1,26 +1,13 @@
 {% extends "base.html" %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+{% endblock %}
+
 {% block content %}
-
-    <h1>Recent Projects</h1>
-    {% for post in posts %}
-    <section>
-        <h2> {{ post.title }}</h2>
-        <p class="project_poster_and_date" >Posted by {Marshall} on {date}, {tag} </p>
-        <h3>Description</h3>
-        <p> {{ post.description }} </p>
-        <h3>Personal Overview</h3>
-        <p> {{ post.personal_overview }} </p>
-        <a href="URL" class="link">
-            <p>Continue reading this post</p>
-        </a>
-
-        <div class="video-container">
-            <video controls>
-                <source src="/static/videos/{{ post.video.name }}" type="video/mp4">    
-            </video>  
-        </div>
-    </section>  
-    {% endfor %}
-
+<section>
+    <h2>Welcome to our Home Page!</h2>
+    <p>Contact me here:</p>
+</section>
 {% endblock %}
