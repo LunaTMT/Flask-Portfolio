@@ -7,24 +7,9 @@ bp = Blueprint('main', __name__)
 @bp.route('/')
 @bp.route('/index')
 def index():
-
-    posts = [
-        {
-        "title" : "Minesweeper",
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "personal_overview" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "video" : {"name" : "minesweeper.mp4",
-                   "type" : "video/mp4"}
-    },  {
-        "title" : "Bubbleshooter",
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "personal_overview" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "video" : {"name" : "bubbleshooter.mp4",
-                   "type" : "video/mp4"}
-    }]  
-
-
-    return render_template('index.html', title="Home", posts=posts)
+    video_names = ["bubbleshooter", "minesweeper"]
+    
+    return render_template('index.html', title="Home", video_names=video_names)
 
 @bp.route('/about')
 def about():
@@ -43,4 +28,33 @@ def projects():
 def blog():
     return render_template('blog.html', title="Blog")
 
-# More route definitions...
+
+@bp.route('/load_project/<project_name>')
+def load_project(project_name):
+    projects = {"pacman" :  {
+                                "video_name"  : "pacman",
+                                "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit, ante eget tempor luctus, est ligula pretium sem, eu rhoncus elit tortor non quam. Vestibulum tristique lacus ac enim interdum, auctor convallis justo aliquam. Integer auctor odio id nulla varius, non ullamcorper velit tempus.",
+                                "overview"    : "Morbi nec congue sapien. Vivamus eleifend odio et lacus pellentesque fermentum. Quisque id accumsan leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sit amet eleifend odio.",
+                                "devlog"      :  False,
+                                "tutorial"    :  False},
+                "bubbleshooter" : {
+                                "video_name"  : "bubbleshooter",
+                                "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit, ante eget tempor luctus, est ligula pretium sem, eu rhoncus elit tortor non quam. Vestibulum tristique lacus ac enim interdum, auctor convallis justo aliquam. Integer auctor odio id nulla varius, non ullamcorper velit tempus.",
+                                "overview"    : "Morbi nec congue sapien. Vivamus eleifend odio et lacus pellentesque fermentum. Quisque id accumsan leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sit amet eleifend odio.",
+                                "devlog"      :  False,
+                                "tutorial"    :  True},
+
+                "knights tour": {
+                                "video_name"  : "knights tour",
+                                "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit, ante eget tempor luctus, est ligula pretium sem, eu rhoncus elit tortor non quam. Vestibulum tristique lacus ac enim interdum, auctor convallis justo aliquam. Integer auctor odio id nulla varius, non ullamcorper velit tempus.",
+                                "overview"    : "Morbi nec congue sapien. Vivamus eleifend odio et lacus pellentesque fermentum. Quisque id accumsan leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sit amet eleifend odio.",
+                                "devlog"      :  True,
+                                "tutorial"    :  True}
+                }
+
+ 
+
+    return render_template('load_project.html', title=project_name.title() , content=projects[project_name])
+    
+
+
