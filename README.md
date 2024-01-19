@@ -31,9 +31,6 @@ Windows
 
 `flask run`
 
-```
-```
-
 6. Simple hold ctrl or cmd and click on the local host link (127.0.01) as show below
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
