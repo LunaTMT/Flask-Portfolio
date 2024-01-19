@@ -41,3 +41,5 @@ Navigate to the downloaded folder
 Simple hold ctrl or cmd and click on the local host link (127.0.01) as shown below.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Please ensure you end the flask run session as is stated in the terminal by pressing ctrl + c, otherwise you might have trouble trying to rerun the server on the port already in use.
