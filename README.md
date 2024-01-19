@@ -4,5 +4,6 @@
 
 1. Navigate to your terminal
 2. Create a virtual environment\
-   `python -m venv venv`
-3.
+ ```bash
+    python -m venv venv
+4.
