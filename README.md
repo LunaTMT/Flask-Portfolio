@@ -2,7 +2,11 @@
 
 ## Installation
 
-### Navigate to your terminal
+### Open your terminal/console
+
+Navigate to the downloaded folder
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Create a virtual environment
 
