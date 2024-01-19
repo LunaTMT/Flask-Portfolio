@@ -42,4 +42,4 @@ Simple hold ctrl or cmd and click on the local host link (127.0.01) as shown bel
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-Please ensure you end the flask run session as is stated in the terminal by pressing ctrl + c, otherwise you might have trouble trying to rerun the server on the port already in use (The one you have just opened but have not exited correctly).
+Please ensure you end the flask run session as is stated in the terminal by pressing ctrl + c, otherwise you might have trouble trying to rerun the server on the port already in use (The one you have just opened but have not shut down correctly).
