@@ -19,31 +19,12 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="left-section">
-                
-                <ul class="menu">
-                    <li><a href="{{ url_for('main.index') }}">Home</a></li>
-                    <li><a href="{{ url_for('main.about') }}">About</a></li>
-                    <li><a href="{{ url_for('main.projects') }}">Projects</a></li>
-                    <li><a href="{{ url_for('main.blog') }}">Blog</a></li>
-                </ul>
-            </div>
-
-            <div class="right-section">
-
-                <a>
-                    <img src="{{ url_for('static', filename='images/gmail.jpeg') }}" alt="Gmail" id="copyImage" style="cursor: pointer;" onclick="copyToClipboard('taylorthreader@gmail.com');">
-                </a>
-                <a href="https://www.youtube.com/channel/UCYvuD6FQETZ9am_kEeH0xGg" target="_blank">
-                    <img src="{{ url_for('static', filename='images/youtube.jpeg') }}" alt="Youtube">
-                </a>
-                <a href="https://github.com/LunaTMT" target="_blank">
-                    <img src="{{ url_for('static', filename='images/github.jpeg') }}" alt="Github">
-                </a>
-                <a href="https://www.linkedin.com/in/t-shredder-a8857b9a/" target="_blank">
-                    <img src="{{ url_for('static', filename='images/linkedin.jpeg') }}" alt="Linkedin">
-                </a>
-            </div>
+            <ul class="menu">
+                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                <li><a href="{{ url_for('main.about') }}">About</a></li>
+                <li><a href="{{ url_for('main.projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('main.blog') }}">Blog</a></li>
+            </ul> 
         </nav>
         
     </header>
@@ -54,14 +35,24 @@
         {% endblock %}
     </div>
 
+    <footer>
+        <div class="image_container">
+            <a>
+                <img src="{{ url_for('static', filename='images/gmail.jpeg') }}" alt="Gmail" id="copyImage" style="cursor: pointer;" onclick="copyToClipboard('taylorthreader@gmail.com');">
+            </a>
+            <a href="https://www.youtube.com/channel/UCYvuD6FQETZ9am_kEeH0xGg" target="_blank">
+                <img src="{{ url_for('static', filename='images/youtube.jpeg') }}" alt="Youtube">
+            </a>
+            <a href="https://github.com/LunaTMT" target="_blank">
+                <img src="{{ url_for('static', filename='images/github.jpeg') }}" alt="Github">
+            </a>
+            <a href="https://www.linkedin.com/in/t-shredder-a8857b9a/" target="_blank">
+                <img src="{{ url_for('static', filename='images/linkedin.jpeg') }}" alt="Linkedin">
+            </a>
+        </div>
+    </footer> 
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelector('.content h1').classList.add('slide-in');
-            document.querySelector('.content .containers').classList.add('slide-in');
-            document.querySelector('.content .right-list').classList.add('slide-in');
-        });
-    </script>
+
         
 </body>
 </html>

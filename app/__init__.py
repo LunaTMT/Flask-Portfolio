@@ -7,6 +7,8 @@ def create_app():
 
     # Import the routes and register them with the app
     from . import routes
+
+
     app.register_blueprint(routes.bp)
 
     return app
