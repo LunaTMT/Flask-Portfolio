@@ -4,7 +4,7 @@
 
 ### Navigate to your terminal
 
-### Create a virtual environment:
+### Create a virtual environment
 
 #### Windows
 
@@ -14,7 +14,7 @@
 
 `python3 -m venv venv`
 
-### Activate the virtual environment:
+### Activate the virtual environment
 
 #### Windows
 
@@ -28,10 +28,12 @@
 
 `pip install -r requirements.txt`
 
-### Run flask:
+### Run flask
 
 `flask run`
 
-### Simple hold ctrl or cmd and click on the local host link (127.0.01) as show below
+### View site
+
+Simple hold ctrl or cmd and click on the local host link (127.0.01) as shown below.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
