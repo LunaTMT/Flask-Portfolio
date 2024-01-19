@@ -1,23 +1,41 @@
 # Portfolio
 
-## Installation&#x20;
+## Installation
 
 1. Navigate to your terminal
-2. Create a virtual environment\
+2. Create a virtual environment
 
-```html
-<style>
-  code {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    display: block;
-  }
-</style>
-<code>
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
-python -m venv venv
+```
+#Windows
+python -m venv venv 
+
+#Linux/Mac
+python3 -m venv venv
+```
+
+3. Activate the virtual environment
+
+```
+#Windows
 .\venv\Scripts\activate
+
+#Linux/Mac
+source venv/bin/activate
+```
+
+4. Install dependencies using the `requirements.txt` file within the virtual environment
+
+```
 pip install -r requirements.txt
-</code>
+```
+
+5. Run flask&#x20;
+
+```
+flask run
+
+```
+
+6. Simple hold ctrl or cmd and click on the local host link (127.0.01) as show below
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
