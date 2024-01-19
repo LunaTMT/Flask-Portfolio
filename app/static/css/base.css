@@ -1,4 +1,3 @@
-/* Styles for the gradient container */
 body {
     background-color: white; /* Changing body background color */
     width: 80%;
@@ -8,9 +7,13 @@ body {
     justify-content: center; /* Horizontally centering content */
     align-items: center; /* Vertically centering content */
     margin: 0% auto;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
+header {
+    width: 90%;
 }
 
 .content {
     width: 80%;
 }
-

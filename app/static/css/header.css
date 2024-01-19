@@ -1,72 +1,39 @@
-/*HEADER */
-
-/* CSS for header layout */
-header {
-    margin: 0 5%;
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text within the header */
-}
-
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border-style: groove;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-
-
-/* Updated styles for .left-section */
-.left-section {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    padding: 0 20px; /* Add padding to the left and right sides */
-}
-
-.left-section ul {
+header .menu {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
-    width: 100%; /* Set width to fill available space */
-    justify-content: space-evenly; /* Adjust spacing between menu items */
-}
-
-
-
-.menu li {
-    flex-grow: 1; /* Allow each li to take equal space */
-    text-align: center; /* Center the content */
-    margin: 0 2vw;
-}
-
-.menu li a {
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+  }
+  
+  header .menu li {
+    margin-right: 0;
+    margin: 2% 0;
+  }
+  
+  header .menu a {
     text-decoration: none;
-    font-size: 2vw;
-    color: #57575c;
-
-}
-
-
-/* Updated styles for .right-section */
-.right-section {
-    display: flex;
-    align-items: center;
-    padding: 0 20px; 
-    overflow-x: auto; 
-}
-
-.right-section img {
-    width: 75%; /* Adjust the width of the images */
-    height: auto;
-    margin: 0.5vw 1vw;; /* Adjust margin between images */
-    max-width: 100%; /* Ensure images do not exceed their container */
-
-}
-
-/* -------- */
+    color: black;
+    font-size: 2em; /* Default font size for larger screens */
+  
+    /* Media queries for different screen widths */
+    @media screen and (max-width: 1200px) {
+      font-size: 2em;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      font-size: 1.6em;
+    }
+  
+    @media screen and (max-width: 800px) {
+      font-size: 1.4em;
+    }
+  
+    @media screen and (max-width: 600px) {
+      font-size: 1.2em;
+    }
+  }
+  

@@ -1,39 +1,36 @@
 .content h1 {
-    font-size: 4vw;
+    font-size: 3vw;
     border-top: 0;
     border-bottom: 0;
     text-align: left;
 }
 
 
+/* Updated styles for the left-list and containers */
 .content section {
-    
     display: flex;
     justify-content: space-between;
 }
 
-.content .containers{
-   margin-right: 5%;
-
-}
-
-.content .right-list {
+/* Updated class name to .left-list */
+.content .left-list {
     list-style: none;
     padding: 0;
-    margin-left: auto; /* Add this property to push it to the right */
+    margin-right: 2%; /* Adjust margin-right instead of margin-left */
 }
 
-
-.content .right-list li {
-    font-size: 3.5vw;
+/* Updated class name to .left-list */
+.content .left-list li {
+    font-size: 2vw;
     color: #888;
     margin-bottom: 10px;
-    text-align: right; /* Align the text to the right */
+    text-align: left; /* Align the text to the left */
 }
 
-.content .right-list li a {
-    text-decoration: none;
-    color: inherit;
+
+
+.content .containers h2 {
+    font-size: 2vw;
 }
 
 .hide {
