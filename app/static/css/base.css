@@ -10,6 +10,15 @@ body {
     min-height: 100vh; /* Ensure the body takes at least the full viewport height */
 }
 
+h1 {
+    font-size: 3vw;
+    border-top: 0;
+    border-bottom: 0;
+    text-align: left;
+}
+
+
+
 header {
     width: 90%;
 }

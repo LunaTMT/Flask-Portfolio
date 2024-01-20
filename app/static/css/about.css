@@ -1,0 +1,42 @@
+
+.content h2 {
+    text-align: center;
+    font-size: 2vw;
+
+}
+
+.content img {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    border-radius: 50%; /* Adjust the radius as needed */
+    width: 30%; /* Set the width to 20% of its original size */
+    height: auto; /* Maintain aspect ratio */
+    margin:auto;
+}
+
+/* Additional styles for text */
+.content p {
+    max-width: 60%; /* Limit the maximum width of the text */
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    text-align: center;
+
+    margin: 5% auto;
+    font-style: normal;
+    font-size: 1.25vw;
+
+}
+
+.content li {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text within each list item */
+
+    margin: 5% auto;
+    font-style: normal;
+    font-size: 1.25vw;
+}
+
+.content section {
+    margin: 0% 5%;
+}
