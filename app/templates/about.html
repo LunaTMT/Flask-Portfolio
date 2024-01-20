@@ -1,10 +1,38 @@
 {% extends "base.html" %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
 
 {% block content %}
     <!-- Specific content for the home page -->
     <section>
-        <h2>Welcome to our About Page!</h2>
-        <p>I am about</p>
+        <h2>Taylor Threader</h2>
+        
+        
+        <img src="{{ url_for('static', filename='images/russia.jpeg') }}" alt="Image in Russia">
+        <p>I'm a passionate programmer based in Chelmsford with a deep love for learning. I take pride in holding a 1st class BSc in Computer Science from Lincoln University.</p>
+
+        <h2>Skills</h2>
+        <div class="skills">
+            <ul>
+                <li> Programming Languages: Python, Javascript, C++, C#, MATLAB, Prologue</li>
+                <li> Web Development: Flask, HTML, CSS</li>
+                <li> Design: Figma</li>
+                <li> Databases: PostgreSQL & MySQL</li>
+                <li> Languages: English, Russian, Italian</li>
+            </ul>
+        </div>
+
+        
+        <h2>Interests</h2>
+        <div class="interests">
+            <p>I am particularly fascinated by software, web, and game development. This passion drives me to explore and apply my skills in diverse projects, which you can discover in the project section of the navigation menu. 
+            I have a keen interest in languages and am additionally pursuing a self-study degree in Mathematics and an in depth study of algorithms. 
+            </p>
+        </div>
+
+
     </section>
 {% endblock %}
