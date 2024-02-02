@@ -2,37 +2,82 @@
 
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <script src="{{ url_for('static', filename='js/toggle_visibility.js') }}"></script>
 {% endblock %}
 
 
 {% block content %}
     <!-- Specific content for the home page -->
     <section>
-        <h2>Taylor Threader</h2>
+        <h1>About</h1>
+        <ul class="left-list">
+            <li onclick="toggleContainerVisibility('about-container')">Information</li>
+            <div id="about-container" class="about-container hide">   
+                <img src="{{ url_for('static', filename='images/russia.jpeg') }}" alt="Image in Russia">
+                <p>I'm a passionate programmer based in Chelmsford with a deep love for learning. 
+                    I take pride in holding a 1st class BSc in Computer Science from Lincoln University. 
+                    My journey in the world of coding has been driven by an insatiable curiosity and a relentless pursuit of knowledge. 
+                    Whether it's exploring cutting-edge technologies or delving into complex algorithms, 
+                    I thrive on the challenges that programming presents.
+
+                    In addition to my academic achievements, I have accumulated hands-on experience in various projects, 
+                    honing my skills in software development, web design, and game development. 
+                    I find joy in crafting elegant solutions and creating seamless user experiences.</p>
+
+            </div>
+
+            <li onclick="toggleContainerVisibility('skills-container')">Skills</li>
+
+            <div id="skills-container" class="skills-container hide">           
+                <div class="skills">
+                    <ul>
+                        <li onclick="toggleContainerVisibility('PL-container', 'skills-container')">Programming Languages</li>
+                        <div id="PL-container" class="PL-container hide">           
+                            <div class="PL">
+                                <p>Python</p>
+                                <p>Javascript</p>
+                                <p>C++</p>
+                                <p>C#</p>
+                                <p>MATLAB</p>
+                                <p>Prologue</p>
+                                <p>PostgreSQL & MySQL</p>
+                                <p>Flask</p>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            </div>
+                            
+                        <li onclick="toggleContainerVisibility('languages-container', 'skills-container')">Languages</li>
+                        <div id="languages-container" class="languages-container hide">    
+                            <div class="languages">  
+                                <p>English</p>
+                                <p>Russian</p>
+                                <p>Italian</p>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <li onclick="toggleContainerVisibility('interests-container')">Interests</li>
+
+            <div id="interests-container" class="interests-container hide">            
+                <div class="interests">
+                    <p>
+                        I have a strong interest in software, web, and game development, and this enthusiasm motivates me to engage in various projects, 
+                        as highlighted in the project section of the navigation menu. Alongside my passion for coding, I also have a keen interest in languages. 
+                        Furthermore, I am actively pursuing a self-study degree in Mathematics and delving deep into the study of algorithms.
+                    </p>
+                </div>
+            </div>
+        </ul>
+
+
+      
+      
+
         
         
-        <img src="{{ url_for('static', filename='images/russia.jpeg') }}" alt="Image in Russia">
-        <p>I'm a passionate programmer based in Chelmsford with a deep love for learning. I take pride in holding a 1st class BSc in Computer Science from Lincoln University.</p>
-
-        <h2>Skills</h2>
-        <div class="skills">
-            <ul>
-                <li> Programming Languages: Python, Javascript, C++, C#, MATLAB, Prologue</li>
-                <li> Web Development: Flask, HTML, CSS</li>
-                <li> Design: Figma</li>
-                <li> Databases: PostgreSQL & MySQL</li>
-                <li> Languages: English, Russian, Italian</li>
-            </ul>
-        </div>
-
-        
-        <h2>Interests</h2>
-        <div class="interests">
-            <p>I am particularly fascinated by software, web, and game development. This passion drives me to explore and apply my skills in diverse projects, which you can discover in the project section of the navigation menu. 
-            I have a keen interest in languages and am additionally pursuing a self-study degree in Mathematics and an in depth study of algorithms. 
-            </p>
-        </div>
-
 
     </section>
 {% endblock %}

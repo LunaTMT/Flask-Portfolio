@@ -6,47 +6,11 @@
     text-align: left;
 }
 
-/* Media queries for different screen widths */
-@media screen and (max-width: 600px) {
-    .content h1 {
-        font-size: 4vw; /* Adjust the font size for smaller screens */
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 900px) {
-    .content h1 {
-        font-size: 3.5vw; /* Adjust the font size for medium screens */
-    }
-}
-
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-    .content h1 {
-        font-size: 3.5vw; /* Adjust the font size for larger medium screens */
-    }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 1600px) {
-    .content h1 {
-        font-size: 3vw; /* Adjust the font size for larger screens */
-    }
-}
-
-@media screen and (min-width: 1601px) {
-    .content h1 {
-        font-size: 3vw; /* Adjust the font size for extra-large screens */
-    }
-}
 
 
-
-
-.content .left-list {
-    list-style: none;
-    padding: 0;
-}
 
 .content .left-list li {
-    color: #888;
+
     margin-bottom: 10px;
     text-align: left; /* Align the text to the left */
 }
@@ -57,33 +21,3 @@
     color: inherit;
 }
 
-/* Media queries for different screen widths */
-@media screen and (max-width: 600px) {
-    .content .left-list li a {
-        font-size: 4vw; /* Adjust the font size for smaller screens */
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 900px) {
-    .content .left-list li a {
-        font-size: 3vw; /* Adjust the font size for medium screens */
-    }
-}
-
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-    .content .left-list li a {
-        font-size: 3vw; /* Adjust the font size for larger medium screens */
-    }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 1600px) {
-    .content .left-list li a {
-        font-size: 2.5vw; /* Adjust the font size for larger screens */
-    }
-}
-
-@media screen and (min-width: 1601px) {
-    .content .left-list li a {
-        font-size: 2vw; /* Adjust the font size for extra-large screens */
-    }
-}

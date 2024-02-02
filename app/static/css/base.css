@@ -15,8 +15,8 @@ h1 {
     border-top: 0;
     border-bottom: 0;
     text-align: left;
+    margin-bottom: -0.5%;
 }
-
 
 
 header {
@@ -26,3 +26,121 @@ header {
 .content {
     width: 80%;
 }
+
+/* Updated class name to .left-list */
+.left-list {
+    list-style: none;
+    padding: 0;
+    margin-right: 2%; /* Adjust margin-right instead of margin-left */
+}
+
+/* Updated class name to .left-list */
+.left-list li {
+    font-size: 2vw;
+    color: #888;
+    margin-bottom: 10px;
+    text-align: left; /* Align the text to the left */
+}
+
+
+.hide {
+    display: none;
+  }
+
+.left-list {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+/* Hover styles */
+li:hover,
+li a:hover {
+    color: #007bff;
+}
+
+.no-hover:hover {
+    background-color: initial;
+    color: initial;
+}
+
+/* Media queries for different screen widths */
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 8vw !important; /* Adjust the font size for smaller screens */
+    }
+
+    .left-list li a, .left-list li {
+        font-size: 5vw !important; /* Use !important to increase specificity */
+    }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 5vw !important; /* Adjust the font size for medium screens */
+    }
+
+    .left-list li a, .left-list li {
+        font-size: 4vw !important; /* Adjust the font size for smaller screens */
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    h1 {
+        font-size: 4vw !important; /* Adjust the font size for larger medium screens */
+    }
+    .left-list li a, .left-list li {
+        font-size: 3vw !important; /* Adjust the font size for smaller screens */
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    h1 {
+        font-size: 3vw !important; /* Adjust the font size for larger screens */
+    }
+    .left-list li a, .left-list li {
+        font-size: 2vw !important; /* Adjust the font size for smaller screens */
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    h1 {
+        font-size: 3vw; /* Adjust the font size for extra-large screens */
+    }
+    .left-list li a, .left-list li {
+        font-size: 2vw !important; /* Adjust the font size for smaller screens */
+    }
+}
+
+
+
+
+/* Initial styles */
+.underline-animation {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Animation */
+  .underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: #007bff; /* Adjust the color of the underline */
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .underline-animation:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

@@ -2,12 +2,10 @@
 
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
- 
 {% endblock %}
 
 
 {% block content %}
-
     <h1>Recent Projects</h1>
     <ul class="left-list">
         <li><a href="{{ url_for('main.load_project', project_name='pacman') }}">Pacman</a></li>
@@ -15,3 +13,5 @@
         <li><a href="{{ url_for('main.load_project', project_name='knights tour') }}">The Knights Tour Simulation</a></li>
     </ul>
 {% endblock %}
+
+
